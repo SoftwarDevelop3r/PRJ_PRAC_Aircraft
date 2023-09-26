@@ -129,8 +129,11 @@ public class Test {
 		informar("registre d'avions...");
 		try {
 			for (Company company : all.keySet()) {
+				//System.out.println("company " + company.getName());
 				for (Aircraft aircraft : all.get(company)) {
+					//System.out.println("aircraft " + aircraft.getName());
 					if (!registre.registerAircraft(company, aircraft)) {
+						//System.out.println("test");
 						notificarError("registerAircraft. Resultat incorrecte. S'esperava true", SORTIR);
 					}
  				}
